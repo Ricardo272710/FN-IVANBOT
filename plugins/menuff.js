@@ -2,8 +2,8 @@ let handler = async (m, { isPrems, conn }) => {
 let time = global.db.data.users[m.sender].lastcofre + 0 // 36000000 10 Horas //86400000 24 Horas
 if (new Date - global.db.data.users[m.sender].lastcofre < 0) throw `[❗𝐈𝐍𝐅𝐎❗] 𝚈𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚂𝚃𝙴 𝚃𝚄 𝙲𝙾𝙵𝚁𝙴\𝚗𝚅𝚄𝙴𝙻𝚅𝙴 𝙴𝙽 *${msToTime(time - new Date())}* 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚁`
 
-let img = 'https://qu.ax/CswtK.jpg' 
-let texto = `> 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 𝙑𝙀𝙍𝙎𝙐𝙎
+let img = 'https://qu.ax/zPFJK.jpeg' 
+let texto = `» > 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 𝙑𝙀𝙍𝙎𝙐𝙎
 
 ★ 𝙍𝙀𝙂𝙇𝘼𝙎 𝙂𝙀𝙉𝙀𝙍𝘼𝙇𝙀𝙎 ★
  
@@ -32,8 +32,7 @@ let texto = `> 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 𝙑𝙀𝙍𝙎𝙐𝙎
 ➺.24𝘷𝘴24 𝘏𝘏:𝘔𝘔 𝘊𝘙
 ➺.𝘊𝘶𝘢𝘥𝘳𝘪𝘭𝘢𝘵𝘦𝘳𝘰 𝘏𝘏:𝘔𝘔 𝘊𝘙 
 
- *𝘊𝘰𝘯𝘵𝘢𝘤𝘵:* .𝘰𝘸𝘯𝘦𝘳👤
-`
+ *𝘊𝘰𝘯𝘵𝘢𝘤𝘵:* .𝘰𝘸𝘯𝘦𝘳👤`
 
 const fkontak = {
 	"key": {
@@ -52,7 +51,8 @@ const fkontak = {
 await conn.sendFile(m.chat, img, 'img.jpg', texto, fkontak)
 global.db.data.users[m.sender].lastcofre = new Date * 1
 }
-handler.help = ['menuff']
-handler.tags = ['freefire' ,'main'] 
-handler.command = ['menuff', 'menufreefire'] 
+handler.help = ['reglaslideres']
+handler.tags = ['freefire']
+handler.command = ['menuff'] 
+handler.admin = true
 export default handler
